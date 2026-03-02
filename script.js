@@ -1,5 +1,5 @@
 const audio = document.getElementById("radio");
-audio.src = "https://relevantly-nooklike-xavi.ngrok-free.dev/stream";
+
 const button = document.getElementById("playBtn");
 
 button.addEventListener("click", () => {
@@ -14,7 +14,7 @@ button.addEventListener("click", () => {
 
 async function fetchMetadata() {
     try {
-        const response = await fetch("https://relevantly-nooklike-xavi.ngrok-free.dev/status-json.xsl");
+        const response = await fetch("http://localhost:8000/status-json.xsl");
         const data = await response.json();
 
         const source = data.icestats.source;
