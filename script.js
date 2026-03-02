@@ -1,11 +1,12 @@
 const audio = document.getElementById("radio");
+audio.src = "https://relevantly-nooklike-xavi.ngrok-free.dev/stream";
 const button = document.getElementById("playBtn");
 
 button.addEventListener("click", () => {
     if (audio.paused) {
         audio.play();
         button.textContent = "STOP THE NOISE";
-    }else {
+    } else {
         audio.pause();
         button.textContent = "ENTER THE PIT";
     }
